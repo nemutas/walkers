@@ -2,4 +2,5 @@
 
 https://nemutas.github.io/walkers/
 
-<img src='https://github.com/nemutas/walkers/assets/46724121/4be4843d-522a-4764-a563-6f9151628495' alt='' width='700' />
+<img src='https://github.com/nemutas/walkers/assets/46724121/1f0b102b-2d66-4bfa-b420-5d22e1195a70' alt='' width='700' />
+
