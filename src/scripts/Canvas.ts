@@ -102,7 +102,7 @@ export class Canvas {
 
     const { width, height } = geometry.parameters
 
-    const amount = { x: 30, y: 16 }
+    const amount = { x: 31, y: 17 }
     const offset = { x: (width * (amount.x - 1)) / 2, y: (height * (amount.y - 1)) / 2 }
 
     for (let x = 0; x < amount.x; x++) {
@@ -192,16 +192,17 @@ export class Canvas {
       }
 
       const lineColor = this.lines.geometry.attributes.color.array
+      const param = this.pointsParams[pointIndex]
       for (let i = 0; i < distances.length; i++) {
         let d = distances[i]
         d = 1 - d / diagnal
         d = d * d * d
-        d *= this.pointsParams[pointIndex].life
+        d *= param.life
 
         for (let j = 0; j < 2; j++) {
-          lineColor[pointIndex * 24 + i * 6 + j * 3 + 0] = this.pointsParams[pointIndex].color.r * d * worldDistance
-          lineColor[pointIndex * 24 + i * 6 + j * 3 + 1] = this.pointsParams[pointIndex].color.g * d * worldDistance
-          lineColor[pointIndex * 24 + i * 6 + j * 3 + 2] = this.pointsParams[pointIndex].color.b * d * worldDistance
+          lineColor[pointIndex * 24 + i * 6 + j * 3 + 0] = param.color.r * d * worldDistance
+          lineColor[pointIndex * 24 + i * 6 + j * 3 + 1] = param.color.g * d * worldDistance
+          lineColor[pointIndex * 24 + i * 6 + j * 3 + 2] = param.color.b * d * worldDistance
         }
       }
     }
